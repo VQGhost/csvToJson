@@ -1,9 +1,14 @@
 'use strict';
+let chartreplace = ''; 
 
 class StringUtils {
 
+    replaceChart(value) {
+        chartreplace = value;
+    }
+
     trimPropertyName(value) {
-        return value.replace(/\s/g, '');
+        return value.replace(/\s/g, chartreplace);
     }
 
     getValueFormatByType(value) {
