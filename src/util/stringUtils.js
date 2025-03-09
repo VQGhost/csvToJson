@@ -1,18 +1,19 @@
-'use strict';
-let chartreplace = ''; 
+"use strict";
+let chartreplace = "";
+
+let replaceValue = "";
 
 class StringUtils {
-
-    replaceChart(value) {
-        chartreplace = value;
+    getReplaceChar(value) {
+        replaceValue = value;
     }
 
     trimPropertyName(value) {
-        return value.replace(/\s/g, chartreplace);
+        return value.trim().replace(/\s/g, replaceValue);
     }
 
     getValueFormatByType(value) {
-        if(value === undefined || value === ''){
+        if (value === undefined || value === "") {
             return String();
         }
         //is Number
@@ -21,7 +22,7 @@ class StringUtils {
             return Number(value);
         }
         // is Boolean
-        if(value === "true" || value === "false"){
+        if (value === "true" || value === "false") {
             return JSON.parse(value.toLowerCase());
         }
         return String(value);

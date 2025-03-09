@@ -13,6 +13,14 @@ const encodingOps = {
 };
 
 /**
+ * If there is a space in the headers, it is replaced by a specific character
+ */
+exports.getReplaceChar = function (value = '') {
+  csvToJson.getReplaceChar(value);
+  return this;
+}
+
+/**
  * Prints a digit as Number type (for example 32 instead of '32')
  */
 exports.formatValueByType = function (active = true) {

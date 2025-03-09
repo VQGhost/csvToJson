@@ -1,5 +1,10 @@
 declare module 'convert-csv-to-json' {
   export class ConvertCsvToJson {
+    /** 
+     * If there is a space in the headers, it is replaced by a specific character
+     */
+    getReplaceChar(value: string): void;
+
     /**
      * Prints a digit as Number type (for example 32 instead of '32')
      */
