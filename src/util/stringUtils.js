@@ -1,6 +1,4 @@
 "use strict";
-let chartreplace = "";
-
 let replaceValue = "";
 
 class StringUtils {

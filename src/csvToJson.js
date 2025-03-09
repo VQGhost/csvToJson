@@ -9,6 +9,10 @@ const defaultFieldDelimiter = ";";
 
 class CsvToJson {
 
+  getReplaceChar(value) {
+    stringUtils.getReplaceChar(value);
+  }
+
   formatValueByType(active) {
     this.printValueFormatByType = active;
     return this;
